@@ -1,6 +1,12 @@
+*, *::before, *::after {
+    margin:0;
+    padding:0;
+}
 .square {
     display:inline-block;
     border:1px solid black;
+}
+
+#container {
     margin:0 auto;
-    padding:1.125rem;
 }
