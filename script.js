@@ -26,10 +26,9 @@ function generateGrid (input) {
             div.style.height = (1000 / input) + 'px';
             div.style.width = ( 1000 / input) + 'px';
             div.addEventListener('mouseenter', function() {
-                div.classList.add('black-square');
-            });
-            div.addEventListener('mouseleave', function() {
-                div.classList.remove('black-square');
+                const r = () => Math.random() * 256 >> 0;
+                const color = `rgb(${r()}, ${r()}, ${r()})`;
+                div.style.backgroundColor = color;
             });
             container.appendChild(div);
         }}
@@ -40,4 +39,6 @@ function resetGrid() {
 
 document.getElementById('reset-grid-btn').addEventListener('click',resetGrid);
 document.getElementById('generate-grid-btn').addEventListener('click',createGrid);
+
+
 
