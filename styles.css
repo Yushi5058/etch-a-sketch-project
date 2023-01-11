@@ -1,10 +1,15 @@
 *, *::before, *::after {
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 .square {
     display:inline-block;
     border:1px solid black;
+}
+
+.black-square {
+    background-color: black;
 }
 
 #container {
