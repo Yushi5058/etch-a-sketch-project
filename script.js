@@ -1,6 +1,8 @@
 const container = document.getElementById('container');
 const inputEl = document.getElementById('input-value');
-document.getElementById('generate-grid-btn').addEventListener('click',updateGrid);
+
+
+
 
 function updateGrid(){
     inputEl.addEventListener("change", createGrid);
@@ -10,7 +12,6 @@ function updateGrid(){
 function createGrid() {
     const input = inputEl.value;
     if (input >=1 && input <= 64) {
-        container.innerHTML = "";
         generateGrid(input);
     } else {
         alert('Invalid input! Please select a number between 1 and 64.');
@@ -32,3 +33,11 @@ function generateGrid (input) {
             });
             container.appendChild(div);
         }}
+
+function resetGrid() {
+    container.innerHTML = '';
+}
+
+document.getElementById('reset-grid-btn').addEventListener('click',resetGrid);
+document.getElementById('generate-grid-btn').addEventListener('click',createGrid);
+
